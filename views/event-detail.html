@@ -5,10 +5,7 @@
     <img id="image" src={{event.image}}>
     <h1 id="title">{{event.title}}</h1><p></p>
   </header>
-{% endblock %}
-
-{% block mainContent %}
-
+  
 <p></p>
 <p>
   <class="event" id="event-{{event.id}}">
@@ -22,4 +19,8 @@
     </ul>
 </p>
 
+<form method="POST">
+  RSVP <input placeholder="Your email" type="email" id="email" name="email"/>
+  <input type="submit" value="Submit"/>
+</form>
 {% endblock %}

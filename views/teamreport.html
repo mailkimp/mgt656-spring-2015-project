@@ -35,37 +35,57 @@
     <img src="http://s21.postimg.org/7gvcmw13b/Burndown_chart.png">
 </article>
 <article>
-    <h4>Sprint Completed Stories</h4>
-    <p>1. Bootstrap</p>
+    <h4>Sprint 2 Completed Stories</h4>
+    <p>1. New Events</p>
         <ul>
-            <li>Create placeholder pages:  /, /about, /events/new, /events/0, /events/1, /events/2</li>
-            <li>Apply Bootstrap CSS framework to every page</li>
-            <li>Apply header and footer elements to each page</li>
-            <li>Place a link to the about page and the homepage in the footer element of every page</li>
+            <li>Create a form for creating new events</li>
+            <li>Add title attribute to the form</li>
+            <li>Add location attribute to the form</li>
+            <li>Add image attribute to the form</li>
+            <li>Add date and time attributes to the form</li>
+            <li>Create an input element to submit the event</li>
+            <li>Redirect user to event detail page if the submitted form is valid</li>
+            <li>If the form is not valid, users are taken back to the form and the errors are shown on the form</li>
         </ul>
-    <p>2. Homepage</p>
+    <p>2. API</p>
         <ul>
-            <li>Create and display team logo</li>
-            <li>Create unordered list of events, where each event is in an li element with class="event" and id="event-{id}", where {id} indicates the numerical id of the event.</li>
-            <li>Make sure each list element displays pertinent information about the event, including: title, date, and how many people are RSVPd etc.</li>
-            <li>Make sure every event li element has an HTML5 time tag that has a datetime attribute equal to the time in ISO 8601 format.</li>
-            <li>Make sure that the title for each event is a clickable link to the "detail page" for that event, which should be at /events/{{id}}, where id refers to the id of the event, e.g. /events/0 would take me to the event with id zero.</li>
-            <li>Make sure events that are over are not shown</li>
-            <li>Make sure users can click a link to take them to /events/new. The link has id="new"</li>
+            <li>Create /api/events page</li>
+            <li>Populate /api/events with all events in JSON format</li>
+            <li>Develop GET request to a URL like ‘/api/events?search=beach’</li>
         </ul>
-        <p>We started by getting all of our teammates logged into and connected across the various platforms. We then got to the business of converting the user stories provided on the “Project” site into a more usable format. After Chris did some only-kind-of-innovative work by putting the data into a Google doc., Cliff and Bridgette did some actually-innovative work by putting the data into a Google spreadsheet. This allowed the team to discuss and document our perceptions of how difficult work would be, so we could assign story points.</p>
-        <div></div>
-        <p>Once we assigned story points, we decided to split them between the three sprints, with about half as many in the first sprint as in the second two sprints. We thought this would be reasonable, as we ramp up our skills early on and things take longer.</p>
+    <p>3. RSVP</p>
+        <ul>
+            <li>Create a form through which users can submit email addresses</li>
+            <li>Create error message to be displayed when users submit email addresses ending in anything other than "@yale.edu"</li>
+            <li>Display event detail page again when users submit a valid email address</li>
+        </ul>
+    <p>This week, we made three major improvements in our development methodology:</p>
+        <ul>
+            <li>We began practicing version control in Github (branching and merging), as well each working out of our own individual Cloud9 workspaces</li>
+            <li>We practiced paired programming, with Bridgette and Ilan working together, and Chris and Cliff working together, respectively</li>
+            <li>We identified bugs in our code, created new issues in our product backlog, and then assigned and resolved each one, thereby passing more tests</li>
+        </ul>
+        <p>Overall, we practiced better programming techniques and teamwork this week, and all became more comfortable using Github and Cloud9 appropriately. When we had questions regarding specific lines of code or story points that were not explicitly covered in the videos provided, we sought help in office hours, which was extremely helpful.</p>
+            <div></div>
+        <p>Likely due to our increased familiarity with Github and Cloud9, we were able to complete more story points in Sprint 2 than we had initially anticipated (see product backlog for more details).</p>
     </article>
     <div></div>
     <article>
         <h3>Product Backlog</h3>
         <h4>Sprint 3</h4>
-        <p>6. API</p>
+        <p>While we had originally slated the New Events and part of the RSVP story points for Sprint 2, and the API and remaining RSVP story points for Sprint 3, we ended up working at a higher velocity than anticipated, so we added the Sprint 3 stories to our product backlog, and completed them within our Sprint 2 timeframe. This turned out to be a good thing, given that we have since been assigned new issues.</p>
+        <div></div>
+        <p>4. Project Changes</p>
             <ul>
-            <li>Create /api/events page</li>
-            <li>Populate /api/events with all events in JSON format</li>
-            <li>Develop GET request to a URL like ‘/api/events?search=beach’</li>
+            <li>Create link with class=“donation” on event detail pages</li>
+            <li>Install Google Analytics on site to track user types and behavior</li>
+            <li>Run A/B testing with RSVP link on homepage to determine if inclusion affects click-through rate</li>
+            <li>Run A/B testing on “donate” v. “support” display language on donation link to determine which leads to greater conversion</li>
+        </ul>
+        <p>5. CSS</p>
+            <ul>
+            <li>Design wireframes for site design of each page</li>
+            <li>Incorporate wireframed changes into site design</li>
         </ul>
     </article>
 </body>
