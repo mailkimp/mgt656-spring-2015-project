@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  <header>
+    <img id="eventLogo" src={{event.image}}>
+    <h1>{{ title }} So it's MailKimp?! Check out the deets.</h1>
+  </header>
+{% endblock %}
+
+{% block mainContent %}
+
+<p></p>
+<p>
+  <class="event" id="event-{{event.id}}">
+    What: {{event.title}}.<p></p>
+    When: <time datetime="{{event.date}}">{{event.date|prettyDate}}</time> <p></p>
+    Where: {{event.location}}<p></p>
+    Who's Going:
+    {% for people in event.attending %}
+      {{people}},
+    {% endfor %}
+</p>
+
+{% endblock %}

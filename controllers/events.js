@@ -111,6 +111,8 @@ function eventDetail (request, response) {
   if (ev === null) {
     response.status(404).send('No such event');
   }
+  console.log("TEST" + ev.id + ev.title);
+  
   response.render('event-detail.html', {event: ev});
 }
 
