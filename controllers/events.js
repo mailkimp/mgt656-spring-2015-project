@@ -87,7 +87,7 @@ function saveEvent(request, response){
   var hour= checkIntRange(request, "hour", 0, 23, contextData);
   
   var image= request.body.image; 
-  if (image.match(/\.(png|gif)$/) === false) {
+  if (image.match(/\.(png|gif)$/) === null) {
     contextData.errors.push('Your image must be a png or gif file');
   }
 
