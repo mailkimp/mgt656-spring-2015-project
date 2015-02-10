@@ -5,9 +5,7 @@
     <h1>{{ title }} So it's MailKimp?! Check out the deets.</h1>
   </header>
 {% endblock %}
-
-{% block mainContent %}
-
+  
 <p></p>
 <p>
   <class="event" id="event-{{event.id}}">
@@ -19,4 +17,8 @@
     {% endfor %}
 </p>
 
+<form method="POST">
+  RSVP <input placeholder="Your email" type="email" id="email" name="email"/>
+  <input type="submit" value="Submit"/>
+</form>
 {% endblock %}
