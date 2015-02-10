@@ -1,30 +1,72 @@
 {% extends "layout.html" %}
-
+<head>
+    <style>
+         header {
+      text-align: center;
+    }
+    </style>
+</head>
 {% block mainContent %}
-
-<p></p>
-      About the MailKimps
-
-    <div>
+<body>
         <ul>
             <p></p>
             <li>
-      <span id="friendly shark-name"><img src ="http://i249.photobucket.com/albums/gg214/themightycelestial_bucket/scifi/Misc%20And%20By%20Year/733cac9d8d0ca2fc33c69429a6fd51531234641.jpg" id="friendly-shark-headshot" height="100" width="100">Bridgette</span>
+      Bridgette (<a href="mailto:bridgette.farrer@yale.edu">bridgette.farrer@yale.edu</a>)
 </li>
-<p></p>
 <li>
-      <span id="quaint lark-name"><img src ="http://www.revolutionsf.com/images/features/heroineslist/heroine_zira.jpg" id="quaint-lark-headshot" height="100" width="100">Chris</span>
+      Chris (<a href="mailto:christopher.fleming@yale.edu">christopher.fleming@yale.edu</a>)
 </li>
-<p></p>
 <li>
-      <span id="pleasant sandpiper-name"><img src ="http://images.popmatters.com/misc_art/o/origionofspecies-mcdowellasceasar-thmb-200.jpg" id="pleasant-sandpiper-headshot" height="100" width="100">Cliff</span>
+      Cliff (<a href="mailto:clifford.emmanuel@yale.edu">clifford.emmanuel@yale.edu</a>)
 </li>
-<p></p>
 <li>
-      <span id="silly gorilla-name"><img src ="http://www.joblo.com/images_arrownews/dawn-of-the-planet-of-the-apes-poster-405x6thm00.jpg" id="silly-gorilla-headshot" height="100" width="100">Ilan</span>
+      Ilan (<a href="mailto:ilan.mann@yale.edu">ilan.mann@yale.edu</a>)
 </li>
 </ul>
-  </div>
 
-  </p>
+<header>
+    <h3>MailKimp</h3>
+    <h3>Project Status Report</h3>
+    <h3>February 11, 2015</h3>
+</header>
+<div></div>    
+<article>
+    <h4>Burndown Chart</h4>
+    <img src="http://s21.postimg.org/7gvcmw13b/Burndown_chart.png">
+</article>
+<article>
+    <h4>Sprint Completed Stories</h4>
+    <p>1. Bootstrap</p>
+        <ul>
+            <li>Create placeholder pages:  /, /about, /events/new, /events/0, /events/1, /events/2</li>
+            <li>Apply Bootstrap CSS framework to every page</li>
+            <li>Apply header and footer elements to each page</li>
+            <li>Place a link to the about page and the homepage in the footer element of every page</li>
+        </ul>
+    <p>2. Homepage</p>
+        <ul>
+            <li>Create and display team logo</li>
+            <li>Create unordered list of events, where each event is in an li element with class="event" and id="event-{id}", where {id} indicates the numerical id of the event.</li>
+            <li>Make sure each list element displays pertinent information about the event, including: title, date, and how many people are RSVPd etc.</li>
+            <li>Make sure every event li element has an HTML5 time tag that has a datetime attribute equal to the time in ISO 8601 format.</li>
+            <li>Make sure that the title for each event is a clickable link to the "detail page" for that event, which should be at /events/{{id}}, where id refers to the id of the event, e.g. /events/0 would take me to the event with id zero.</li>
+            <li>Make sure events that are over are not shown</li>
+            <li>Make sure users can click a link to take them to /events/new. The link has id="new"</li>
+        </ul>
+        <p>We started by getting all of our teammates logged into and connected across the various platforms. We then got to the business of converting the user stories provided on the “Project” site into a more usable format. After Chris did some only-kind-of-innovative work by putting the data into a Google doc., Cliff and Bridgette did some actually-innovative work by putting the data into a Google spreadsheet. This allowed the team to discuss and document our perceptions of how difficult work would be, so we could assign story points.</p>
+        <div></div>
+        <p>Once we assigned story points, we decided to split them between the three sprints, with about half as many in the first sprint as in the second two sprints. We thought this would be reasonable, as we ramp up our skills early on and things take longer.</p>
+    </article>
+    <div></div>
+    <article>
+        <h3>Product Backlog</h3>
+        <h4>Sprint 3</h4>
+        <p>6. API</p>
+            <ul>
+            <li>Create /api/events page</li>
+            <li>Populate /api/events with all events in JSON format</li>
+            <li>Develop GET request to a URL like ‘/api/events?search=beach’</li>
+        </ul>
+    </article>
+</body>
 {% endblock %}
