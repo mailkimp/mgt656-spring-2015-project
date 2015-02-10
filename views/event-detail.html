@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  <header>
+    <h1>{{ title }} So it's MailKimp?! Check out the deets.</h1>
+  </header>
+{% endblock %}
+
+{% block mainContent %}
+
+<p></p>
+<p>
+  <class="event" id="event-{{event.id}}">
+    What: {{event.title}}.<p></p>
+    When: <time datetime="{{event.date}}">{{event.date|prettyDate}}</time> <p></p>
+    Who's Going:
+    {% for people in event.attending %}
+      {{people}},
+    {% endfor %}
+</p>
+
+{% endblock %}
+
+{% block footer %}
+  <footer>
+    Look at me customize the footer. The time is now {{time}}.
+    <a href="/about">About us</a>.
+  </footer>
+{% endblock %}
