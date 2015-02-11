@@ -87,12 +87,13 @@ function saveEvent(request, response){
   var hour= checkIntRange(request, "hour", 0, 23, contextData);
   
   var image= request.body.image; 
-  if (image.match(/\.(png|gif)$/) === false) {
+  if (image.match(/\.(png|gif)$/) === null) {
     contextData.errors.push('Your image must be a png or gif file');
   }
 
   if (contextData.errors.length === 0) {
     var newEvent = {
+      id: events.getMaxId()+1,
       title: request.body.title,
       location: request.body.location,
       image: request.body.image,
@@ -100,7 +101,7 @@ function saveEvent(request, response){
       attending: []
     };
     events.all.push(newEvent);
-    response.redirect('/events');
+    response.redirect('/events/' + newEvent.id);
   }else{
     response.render('create-event.html', contextData);
   }
