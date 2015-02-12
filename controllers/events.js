@@ -100,7 +100,7 @@ function saveEvent(request, response){
       attending: []
     };
     events.all.push(newEvent);
-    response.redirect('/events');
+    response.redirect('/events/' + event.id);
   }else{
     response.render('create-event.html', contextData);
   }
@@ -111,8 +111,6 @@ function eventDetail (request, response) {
   if (ev === null) {
     response.status(404).send('No such event');
   }
-  console.log("TEST" + ev.id + ev.title);
-  
   response.render('event-detail.html', {event: ev});
 }
 
