@@ -248,7 +248,7 @@ describe('The event detail pages',function(){
       browser
         .fill('email', email)
         .pressButton('Submit', function(){
-          assert.ok(browser.html().toLowerCase().indexOf(email) > -1, 'Email ' + email + ' not successfully RSVP\'d.');
+          assert.ok(browser.html().indexOf(email) > -1, 'Email ' + email + ' not successfully RSVP\'d.');
           done();
         });
     });

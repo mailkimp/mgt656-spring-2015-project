@@ -126,7 +126,7 @@ function rsvp (request, response){
     var lcemail=email.toLowerCase();
     var n = lcemail.indexOf("@yale.edu");
     if(n>-1){
-      ev.attending.push(lcemail);
+      ev.attending.push(request.body.email);
       response.redirect('/events/' + ev.id);
     }else{
       contextData.errors.push('Invalid email');
