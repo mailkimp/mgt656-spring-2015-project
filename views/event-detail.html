@@ -19,13 +19,18 @@
   </header>
   
 <p></p>
-<div>
-  <ul class="form-errors">
-    {% for people in event.attending %}
-      <li>{{people}}</li>
-    {% endfor %}
-  </ul>
-</div>
+
+  {% if errors %}
+    <div class="form-errors">
+      <p>Please correct the following errors!</p>
+      <ul class="form-errors">
+        {% for error in errors %}
+          <li>{{error}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
 <p>
   <class="event" id="event-{{event.id}}">
     When: <span id="date">{{event.date|prettyDate}}</span><p></p>
