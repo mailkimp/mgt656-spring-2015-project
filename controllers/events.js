@@ -81,10 +81,10 @@ function saveEvent(request, response){
   if (validator.isURL(request.body.image, 'http'|'https') === false) {
     contextData.errors.push('Your image must be a URL.');
   }
-  var year =checkIntRange(request, "year", 2015, 2016, contextData);
-  var month=checkIntRange(request, "month", 0, 11, contextData);
-  var day= checkIntRange(request, "day", 1, 31, contextData);
-  var hour= checkIntRange(request, "hour", 0, 23, contextData);
+  var year =checkIntRange(request, 'year', 2015, 2016, contextData);
+  var month=checkIntRange(request, 'month', 0, 11, contextData);
+  var day= checkIntRange(request, 'day', 1, 31, contextData);
+  var hour= checkIntRange(request, 'hour', 0, 23, contextData);
   
   var image= request.body.image; 
   if (image.match(/\.(png|gif)$/) === null) {
@@ -112,8 +112,6 @@ function eventDetail (request, response) {
   if (ev === null) {
     response.status(404).send('No such event');
   }
-  console.log("TEST" + ev.id + ev.title);
-  
   response.render('event-detail.html', {event: ev});
 }
 
@@ -124,7 +122,7 @@ function rsvp (request, response){
   }
 
   if(validator.isEmail(request.body.email)){
-    var email=request.body.email
+    var email=request.body.email;
     var lcemail=email.toLowerCase();
     ev.attending.push(lcemail);
     response.redirect('/events/' + ev.id);
