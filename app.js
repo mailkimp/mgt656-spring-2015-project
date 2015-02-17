@@ -9,6 +9,7 @@ var indexControllers = require('./controllers/index.js');
 var aboutControllers = require('./controllers/about.js');
 var eventControllers = require('./controllers/events.js');
 var teamreportControllers = require('./controllers/teamreport.js');
+var finalreportControllers = require('./controllers/final-report.js');
 
 // Create our express app
 var app = express();
@@ -20,6 +21,7 @@ configure(app);
 app.get('/', indexControllers.index);
 app.get('/about', aboutControllers.about);
 app.get('/teamreport', teamreportControllers.teamreport);
+app.get('/final-report', finalreportControllers.teamreport);
 app.get('/events', eventControllers.listEvents);
 app.get('/events/new', eventControllers.newEvent);
 app.get('/api/events', eventControllers.api);
