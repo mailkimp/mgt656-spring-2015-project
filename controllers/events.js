@@ -81,10 +81,10 @@ function saveEvent(request, response){
   if (validator.isURL(request.body.image, 'http'|'https') === false) {
     contextData.errors.push('Your image must be a URL.');
   }
-  var year =checkIntRange(request, "year", 2015, 2016, contextData);
-  var month=checkIntRange(request, "month", 0, 11, contextData);
-  var day= checkIntRange(request, "day", 1, 31, contextData);
-  var hour= checkIntRange(request, "hour", 0, 23, contextData);
+  var year =checkIntRange(request, 'year', 2015, 2016, contextData);
+  var month=checkIntRange(request, 'month', 0, 11, contextData);
+  var day= checkIntRange(request, 'day', 1, 31, contextData);
+  var hour= checkIntRange(request, 'hour', 0, 23, contextData);
   
   var image= request.body.image; 
   if (image.match(/\.(png|gif)$/) === null) {
@@ -93,6 +93,7 @@ function saveEvent(request, response){
 
   if (contextData.errors.length === 0) {
     var newEvent = {
+      id: events.getMaxId()+1,
       title: request.body.title,
       location: request.body.location,
       image: request.body.image,
@@ -100,7 +101,7 @@ function saveEvent(request, response){
       attending: []
     };
     events.all.push(newEvent);
-    response.redirect('/events/' + event.id);
+    response.redirect('/events/' + newEvent.id);
   }else{
     response.render('create-event.html', contextData);
   }
