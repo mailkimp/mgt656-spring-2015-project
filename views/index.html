@@ -3,20 +3,42 @@
 {% block header %}
   <header>
     <h1>{{ title }} MailKimp runs the world like Bey, duh</h1>
-    <img id="logo" src="fragments/MailKimp.jpg">
+    <img id="logo" src="views/fragments/MailKimp.jpg">
   </header>
 {% endblock %}
 
 {% block mainContent %}
-  <p>
-    Welcome to {{ title }}. {{tagline}}
   </p>
-  
   <p>Here is our list of events</p>
-  <div>
-    {% include "fragments/events-list.html" %}
+  <div style="border: 1px solid black">
+    <ul>
+  
+    <li class="event" id="event-0">
+      <a href="/events/0">SOM House Party</a>.
+      <time datetime="Sun Jan 17 2016 16:30:00 GMT+0000 (UTC)">Sunday, Jan. 17 at  4:30pm</time>
+      2 attending so far.
+    </li>
+  
+    <li class="event" id="event-1">
+      <a href="/events/1">BBQ party for hackers and nerds</a>.
+      <time datetime="Tue Sep 01 2015 19:00:00 GMT+0000 (UTC)">Tuesday, Sep.  1 at  7:00pm</time>
+      2 attending so far.
+    </li>
+  
+    <li class="event" id="event-2">
+      <a href="/events/2">BBQ for managers</a>.
+      <time datetime="Tue Oct 20 2015 18:00:00 GMT+0000 (UTC)">Tuesday, Oct. 20 at  6:00pm</time>
+      1 attending so far.
+    </li>
+  
+    <li class="event" id="event-4">
+      <a href="/events/4">Cooking lessons for the busy business student</a>.
+      <time datetime="Tue Sep 02 2014 19:00:00 GMT+0000 (UTC)">Tuesday, Sep.  2 at  7:00pm</time>
+      1 attending so far.
+    </li>
+  
+</ul>
   </div>
-
   <p>
     Check out the <a href="/about">About us</a> page
     as well as the <a href="/events">Events</a> page.
@@ -24,4 +46,35 @@
   <p>
     <a id="new" href="/events/new">Create a new event</a>
   </p>
+  
+  
+  <!-- Load the Content Experiment JavaScript API client for the experiment -->
+  <script src="//www.google-analytics.com/cx/api.js?experiment=5_eFM3oVRt-whOjlLTlDhg"></script>
+   
+  <!-- Load the JQuery library -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+   
+  <script>
+  // Define JavaScript for each page variation of this experiment.
+  var pageVariations = [
+    function() {},  // Original: Do nothing. This will render the default HTML.
+    function() {    // Variation 1: add RSVP text
+      $( 'li.event' ).prepend( 'RSVP ' );
+    }
+  ];
+   
+  // Wait for the DOM to load, then execute the view for the chosen variation.
+  $(document).ready(function(){
+    // Ask Google Analytics which variation to show the user.
+    var chosenVariation = cxApi.chooseVariation('5_eFM3oVRt-whOjlLTlDhg');
+    
+    console.log('chosenVariation =', chosenVariation);
+   
+    // Execute the chosen view
+    pageVariations[chosenVariation]();
+    
+  });
+</script>
+
 {% endblock %}
+
