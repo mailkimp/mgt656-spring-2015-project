@@ -1,14 +1,12 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  text-align: center;
-  background: 104, 224, 249;
+  background: rgb(104, 224, 249);
   color: white;
 }
 
 header {
   font: 50px "Lucida Grande", Helvetica, Arial, sans-serif;
-  text-align: center;
   color: white;
 }
 
