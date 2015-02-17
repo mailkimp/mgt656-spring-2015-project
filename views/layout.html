@@ -25,12 +25,19 @@
     {% block mainContent %}
     {% endblock %}
 
-   {% block footer %}
-      <footer>
+{% block footer %}
+  <p>
     Check out the <a href="/about">About us</a> page
-    or go back to the <a href="/">Home</a> page.
-  </footer>
-    {% endblock %}
+    as well as the <a href="/events">Events</a> page.
+  </p>
+<p>
+    Back to <a href=”/index”>Home
+</p>
+  <p>
+    <a id="new" href="/events/new">Create a new event</a>
+  </p>
+{% endblock %}
+
 
   </body>
 </html>
