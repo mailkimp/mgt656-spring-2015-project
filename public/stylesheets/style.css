@@ -1,13 +1,16 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background: #68e0f9;
+  font: 16px "Segoe UI", Helvetica, Arial, sans-serif;
   color: white;
+  font-weight: bold;
+  background: #68E0F9;
 }
 
 header {
-  font: 50px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 50px "Segoe UI", Helvetica, Arial, sans-serif;
   color: white;
+  font-weight: bold;
+  background: #68E0F9; 
 }
 
 a {

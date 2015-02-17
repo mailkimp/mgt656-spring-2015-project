@@ -1,18 +1,27 @@
 {% extends "layout.html" %}
 
+{% block header %}
+  <header>
+    <h1>WHERE THE PARTY AT?!</h1>
+    <img id="Party Animals" src="/images/dancingmonkey.gif" height="400px">
+  </header>
+{% endblock %}
+
 {% block mainContent %}
+  <p>COME PARTY WITH THE KIMPS.</p>
+  <p>
   <div>
     {% include "fragments/events-list.html" %}
   </div>
   <div>
     <a href="/events/new">Create a new event</a>
   </div>
-
+</p>
 {% endblock %}
 
 {% block footer %}
   <footer>
-    Look at me customize the footer. The time is now {{time}}.
+    Oh snap, we customized the footer. The time is now PARTY TIME.
     <a href="/about">About us</a>.
   </footer>
 {% endblock %}
