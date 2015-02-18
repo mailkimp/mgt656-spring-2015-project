@@ -33,7 +33,7 @@
 <div></div>    
 <article>
     <h4>Burndown Chart</h4>
-    <img src="http://s28.postimg.org/vd2hgh74d/Team_burndown.png">
+    <img src="images/finalburndown.png">
 </article>
 <article>
     <h4>Sprint 3 Completed Stories</h4>
@@ -58,6 +58,12 @@
             <li>Design wireframes for site design of each page</li>
             <li>Incorporate wireframed changes into site design</li>
         </ul>
+                <p>5. Bug Fixes (not included in original sprint)</p>
+            <ul>
+            <li>Replace .jpeg logo with .png</li>
+            <li>Rebuild layout.html and fix duplicate footers</li>
+            <li>Restore links between events.js file and index.html file</li>
+            <li>Get rid of errant events</li>
     </article>
     <div></div>
     <article>
@@ -65,19 +71,21 @@
         <p>Team Mail Kimp completed issues under four major goals for our final sprint.  The first two were user stories under the original assignment: 1) As a user I can visit your page for creating new events at /events/new; and 2) As an attendee, I can visit the event detail page to RSVP for an event.  To complete the New Events user story, we wrote code to redirect a user to the event detail page if the submitted form was valid.  In order to complete the RSVP system, we needed to create a conditional test to determine whether the email address entered was valid.  We used an if function to determine whether the string entered was an email address then used an indexOf function to ensure that the email contained “@yale.edu”.  We converted everything to lowercase to avoid issues with capitalization.  Errors were enumerated on our event-detail.html file in a ul element with class="form-errors".</p>
         <p>The next goal was to address management’s interest in increasing our click-through rate by changing page elements.  We put the Google Analytics code into each html file.  However, this did not work initially.  We then moved the Google Analytics source code to layout.html.  This propagated across all pages then worked.  However, we realized we hadn’t added a “Donate” link which limited the amount of data we had.  However, we still collected enough to conduct an experiment.</p>
         <h4>(1)	How your traffic breaks down across different segments and how they flow through your "funnel" from landing to donation.</h4>
-        <p>On February 17, 2015, 82.2% of traffic to our page was referred from yale.edu, about 11% from som.yale.edu, 3.2% from divinity.yale.edu, 2% from law.yale.edu, and 2% from other sources.  </p>
-        <p>All users from the yale.edu domain are starting at the landing page.  Of those, 565 (95%) drop off and 31 (5%) continue to another page.  Of those who click through, roughly 55% will go event-0, 27% to event-2, 14% to event-1, and 4% create a new event.  We did not receive data for users from the other domains.</p>
+        <img src="images/Referrals.JPG">
+        <p>On February 17, 2015, 68% of traffic to our page was referred from yale.edu, about 19% from som.yale.edu, 6% from divinity.yale.edu, 3% from law.yale.edu, and 3% from other sources.  </p>
+        <img src="images/flow.png">
+        <p>We were only collect Behavior Flow data on 2/16, which was before creating the donation page.  All users on that date were from the yale.edu domain and started at the landing page.  Of those, 565 (95%) dropped off and 31 (5%) continued to another page.  Of those who clicked through, roughly 55% went to event-0, 27% to event-2, 14% to event-1, and 4% create a new event.  We did not receive data for users from the other domains.</p>
         <h4>(2) if making the event links on the home page include the word "RSVP" would increase click-through rate</h4>
-        <p>        </p>
-        <h4>(3) if they should ask people to "donate" or "support" an event in the donation link text to increase conversions.</h4>
-        <p></p>
+        <p>We set up a test to see the impact of adding the word "RSVP" to the event links on the homepage.  Here are the results:</p>
+        <img src="images/Test.JPG">
+        <p>Overall, our test found that visitors were 60% likely to click on the donate link if the event links included the word RSVP on the homepage. The probability of this change outperforming the original was determined by the analytics to be 100%, making us very confident that we should recommend the change to management.</p>
         <p>The last major goal was enhancing the visual presentation through CSS.  For the CSS changes, we enhanced colors, fonts.  We developed custom headers and footers.  We used color dropper to find the hex codes for our custom header.  The images were updated on each page.  Finally we optimized sizing for greatest visibility.</p>
         <p>After making all of these changes, we discovered a number of bugs in our code which added a number of story points. The team had developed a good process for digging into the mocha tests to understand what exactly the problem was and was able to fix all the bugs quickly.</p>
     </article>
     <article>
         <h3>Current backlog</h3>
-        <h4>None.  Smoked it.</h4>
-        <div></div>
+        <h4>Assignment "curveball"</h4>
+        <p>We did not have time to complete the second test - whether asking people to "donate" or "support" an event in the donation link text would increase conversions.  With more time we would have run this test.  We also would liked to have developed a more unique page design and logo to make our website stand out among the multitude of event registration sites that have been popping up these past weeks.  Finally, allowing users to add more details to their events (e.g., max attendees) and implementing some form of online ticketing/payments system would be a logical next step to meet the users' needs. </p><div></div>
              
     </article>
 </body>
